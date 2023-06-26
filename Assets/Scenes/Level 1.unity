@@ -8702,6 +8702,7 @@ MonoBehaviour:
   player: {fileID: 1835353216}
   RockPrefab: {fileID: 8714396239057236070, guid: decf5b7d1f1043249bfa99b52bb41e70, type: 3}
   playerAttackRadius: 1.5
+  RockAttackRadius: 3
 --- !u!1 &579657999
 GameObject:
   m_ObjectHideFlags: 0

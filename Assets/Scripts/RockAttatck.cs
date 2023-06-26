@@ -9,9 +9,17 @@ public class RockAttatck : MonoBehaviour
     private AbilityManager abilityManager;
     public GameObject RockPrefab;
     public float playerAttackRadius;
+    public float RockAttackRadius;
+    string debugText = "";
     void Start()
     {
         abilityManager = player.GetComponent<AbilityManager>();
+    }
+
+    void OnGUI()
+    {
+        GUI.contentColor = Color.red;
+        GUI.Label(new Rect(20, 20, 250, 250), debugText);
     }
 
     void RockAttack() 
@@ -19,6 +27,14 @@ public class RockAttatck : MonoBehaviour
         Vector2 spawnPosition = transform.position; //get position
         GameObject newrock = Instantiate(RockPrefab, spawnPosition, Quaternion.identity);
         Destroy(newrock, duration);
+        Vector2 rockposition = transform.position;
+        Vector2 playerposition = player.transform.position;
+        float distance = Vector3.Distance(rockposition, playerposition);
+        if (distance <= RockAttackRadius)
+        {
+            debugText = "Game Over";
+            Debug.Log(debugText);
+        }
     }
 
 
