@@ -7,6 +7,7 @@ public class RockAttatck : MonoBehaviour
     public float duration = 0.5f;
     public GameObject player;
     private AbilityManager abilityManager;
+    private SendToGoogle sendtogoogle;
     public GameObject RockPrefab;
     public float playerAttackRadius;
     public float RockAttackRadius;
@@ -14,6 +15,8 @@ public class RockAttatck : MonoBehaviour
     void Start()
     {
         abilityManager = player.GetComponent<AbilityManager>();
+        sendtogoogle = GetComponent<SendToGoogle>();
+     
     }
 
     void OnGUI()
@@ -34,6 +37,7 @@ public class RockAttatck : MonoBehaviour
         {
             debugText = "Game Over";
             Debug.Log(debugText);
+            sendtogoogle.Send(System.DateTime.Now, playerposition);
         }
     }
 
