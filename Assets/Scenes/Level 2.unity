@@ -14655,8 +14655,9 @@ GameObject:
   - component: {fileID: 1351150575}
   - component: {fileID: 1351150577}
   - component: {fileID: 1351150578}
+  - component: {fileID: 1351150579}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Rock_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14776,6 +14777,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3.2}
   m_EdgeRadius: 0
+--- !u!114 &1351150579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351150574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d47e94c63409240b15e696485f10b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  jitterRange: 1
+  playerTransform: {fileID: 0}
+  isLeft: 0
+  rotationSpeed: 200
+  fire: {fileID: 0}
+  objectTag: FireAbility
+  maxLives: 3
+  renderer: {fileID: 0}
+  player: {fileID: 1917396524}
 --- !u!1 &1373895906
 GameObject:
   m_ObjectHideFlags: 0
